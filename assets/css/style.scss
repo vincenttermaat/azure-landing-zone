@@ -10,6 +10,10 @@
     line-height: 56px;
 }
 
+.site-header .wrapper {
+
+}
+
 .post-title {
     font-size: 1.2rem;
 }
@@ -23,17 +27,33 @@
 }
 
 .site-header .wrapper {
-    max-width: 100%
+    max-width: 100%;
+    padding-right: 5px;
 }
 
 .site-title:visited {
     color: white;
 }
 
+a.site-title:hover {
+    background-color: #106EBE;
+    text-decoration: none;
+}
+
 .site-title {
     color: white;
     font-weight: 600;
     font-size: 20px;
+    line-height: normal;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+
+.site-nav {
+    background-color: #0078d4;
+    border:0;
+    top:18px
 }
 
 .site-nav .page-link {
@@ -65,8 +85,8 @@ a {
 
 .site-nav .social-media-list li a {
     border: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 .site-nav .social-media-list li a:hover, .pagination li a:hover {
