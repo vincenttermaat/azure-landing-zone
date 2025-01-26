@@ -3,7 +3,7 @@ description: Cloud-Native Azure development
 author:
   name: Vincent ter Maat
   
-remote_theme: jeffreytse/jekyll-theme-yat
+remote_theme: jekyll/minima
 plugins:
   - jekyll-remote-theme
 
