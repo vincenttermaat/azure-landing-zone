@@ -3,4 +3,4 @@ title: About
 permalink: /about/
 ---
 
-About Vincent
+About Vincent ter Maat
