@@ -5,6 +5,7 @@ author:
   
 remote_theme: jekyll/minima
 plugins:
+  - jekyll-feed
   - jekyll-remote-theme
 
 minima:
