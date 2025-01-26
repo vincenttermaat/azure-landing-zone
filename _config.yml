@@ -1,7 +1,8 @@
 title: Azure Landing Zone
-description: © 2025
-author:
-  name: Vincent ter Maat
+headerDescription: Microsoft Docs assembled
+description: '© 2025 Vincent ter Maat'
+# author:
+#   name: Vincent ter Maat
 
 remote_theme: jekyll/minima
 plugins:

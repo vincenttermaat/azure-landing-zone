@@ -7,9 +7,10 @@
 
 .site-header {
     background-color: #0078d4;
+    line-height: 56px;
 }
 
-.site-header > .wrapper {
+.site-header .wrapper {
     max-width: 100%
 }
 
@@ -39,4 +40,23 @@ body {
 
 a:visited {
     color: #1890f1
+}
+
+.site-nav .social-media-list li {
+    border: 0;
+    margin: 0;
+}
+
+.site-nav .social-media-list li a {
+    border: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.site-nav .social-media-list li a:hover, .pagination li a:hover {
+    background-color: #106EBE;
+}
+
+.social-links .svg-icon {
+    fill: white;
 }
