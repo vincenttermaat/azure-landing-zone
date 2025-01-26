@@ -1,0 +1,38 @@
+---
+---
+
+@import
+  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
+  "minima/initialize";
+
+.site-header {
+    background-color: #0078d4;
+}
+
+.site-title:visited {
+    color: white;
+}
+
+.site-title {
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.site-nav .page-link {
+    color: white;
+}
+
+.site-nav .page-link:visited {
+    color: white;
+}
+
+body {
+    color: white;
+    font-style: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    font-weight: 400;
+}
+
+a:visited {
+    color: #1890f1
+}
