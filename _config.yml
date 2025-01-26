@@ -6,5 +6,10 @@ author:
 remote_theme: jeffreytse/jekyll-theme-yat
 plugins:
   - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-spaceship
 
 github_username: vincenttermaat
