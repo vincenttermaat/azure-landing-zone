@@ -6,7 +6,6 @@ author:
 remote_theme: jeffreytse/jekyll-theme-yat
 plugins:
   - jekyll-remote-theme
-  - jekyll-theme-primer
   - jekyll-coffeescript
   - jekyll-commonmark-ghpages
   - jekyll-relative-links
