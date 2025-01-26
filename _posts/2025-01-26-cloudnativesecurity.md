@@ -4,6 +4,8 @@ date: 2025-01-26
 tags: security microsoft-identity-platform managed-identities azure-entra-id
 ---
 
+How to leverage cloud-native security mechanisms to secure and authenticate API resources in Azure.
+
 1. Enable Bicep extensibility (preview) to enable Microsoft Graph API support [Use extensions in Bicep - Azure Resource Manager - Microsoft Learn](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-extension)
 2. Deploy app-reg for target [Bicep templates for Microsoft Graph documentation - Microsoft Learn](https://learn.microsoft.com/en-us/graph/templates/)
 3. Configured App-reg on target
