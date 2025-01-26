@@ -1,3 +1,5 @@
 ---
-title: Azure Landing Zone
+title: Home
+layout: home
 ---
+{% include breadcrumbs.html %}

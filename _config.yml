@@ -2,7 +2,7 @@ title: Azure Landing Zone
 description: Cloud-Native Azure development
 author:
   name: Vincent ter Maat
-  
+
 remote_theme: jekyll/minima
 plugins:
   - jekyll-seo-tag
@@ -16,3 +16,5 @@ minima:
   social_links:
       - { platform: github,          user_url: "https://github.com/vincenttermaat" }
       - { platform: linkedin,       user_url: "https://www.linkedin.com/in/vincent-ter-maat" }
+  header_pages:
+  - about.md
