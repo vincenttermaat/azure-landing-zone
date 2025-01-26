@@ -1,6 +1,7 @@
 ---
 title: "Use Managed Identity to call an Azure Container App or App Service API"
 date: 2025-01-26
+author: "Vincent ter Maat"
 tags: security microsoft-identity-platform managed-identities azure-entra-id
 ---
 
