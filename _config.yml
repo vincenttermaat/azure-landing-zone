@@ -1,1 +1,12 @@
-theme: minima
+title: Azure Landing Zone
+author:
+  name: Vincent ter Maat
+  
+remote_theme: jekyll/minima
+plugins:
+  - jekyll-feed
+  - jekyll-remote-theme
+minima:
+  skin: auto
+
+github_username: vincenttermaat
