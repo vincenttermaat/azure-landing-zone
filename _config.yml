@@ -10,7 +10,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-show_excerpts: true
+# show_excerpts: true
 
 minima:
   skin: auto
