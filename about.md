@@ -1,5 +1,5 @@
 ---
-title: About Vincent
+title: About Vincent ter Maat
 permalink: /about/
 ---
 
