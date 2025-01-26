@@ -7,6 +7,15 @@ remote_theme: jeffreytse/jekyll-theme-yat
 plugins:
   - jekyll-remote-theme
   - jekyll-theme-primer
+  - jekyll-coffeescript
+  - jekyll-commonmark-ghpages
+  - jekyll-relative-links
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-optional-front-matter
+  - jekyll-github-metadata
+  - jekyll-titles-from-headings
+  - jekyll-gist
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
