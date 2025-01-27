@@ -13,3 +13,6 @@ How to leverage cloud-native security mechanisms to secure and authenticate API 
 4. Enable managed identity on client-api
 5. Grant Managed Identity of client access to App-Registration
 6. Use [DefaultAzureCredential](https://learn.microsoft.com/en-us/dotnet/api/azure.identity.defaultazurecredentialEnvironment) to request a token in client and token is put on authorization-header towards target
+
+
+....
