@@ -4,15 +4,15 @@
     <div class="wrapper">
   
       <div class="footer-col-wrapper">
-        <div class="footer-col">
+        <!-- <div class="footer-col">
           <p class="feed-subscribe">
             <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}">
               <svg class="svg-icon orange">
                 <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
               </svg><span>Subscribe</span>
             </a>
-          </p>
-        {%- if site.author %}
+          </p> -->
+        <!-- {%- if site.author %}
           <ul class="contact-list">
             {% if site.author.name -%}
               <li class="p-name">{{ site.author.name | escape }}</li>
@@ -21,20 +21,20 @@
               <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
             {%- endif %}
           </ul>
-        {%- endif %}
+        {%- endif %} 
         </div>
         <div class="footer-col">
           <p>{{ site.description | escape }}</p>
-        </div>
+        </div>  -->
+        <div style="right:20px; font-size: 14px; margin-top: 8px; position:absolute; color:#999999;">© 2025 Vincent ter Maat</div>
       </div>
   
       <div class="social-links">
         <ul class="social-media-list">            
             {%- include social.html -%}      
-            <li><a href="/about" style="color: white;">About Vincent</a></li>      
+            <!-- <li><a href="/about" style="color: #999999;">About Vincent</a></li> -->
          </ul>
       </div>
-  
+      
     </div>
-  
   </footer>

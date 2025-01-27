@@ -6,8 +6,14 @@
   "minima/initialize";
 
 .site-header {
-    background-color: #0078d4;
-    line-height: 56px;
+    background-color: #252423;
+    line-height: 41px;
+    border:none;
+    min-height:auto;
+}
+
+.site-footer {
+    padding: 5px 0;
 }
 
 .post-title {
@@ -28,71 +34,78 @@
 
 .site-header .wrapper {
     max-width: 100%;
-    padding-right: 5px;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
 .site-title:visited {
-    color: white;
+    color: #e6e6e6;
 }
 
 a.site-title:hover {
-    background-color: #106EBE;
+    background-color: #605e5c;
     text-decoration: none;
 }
 
 .site-title {
-    color: white;
+    color: #e6e6e6;
     font-weight: 600;
     font-size: 20px;
-    line-height: normal;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    line-height: 23px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left:20px;
+    padding-right:20px;
 }
 
 
 .site-nav {
-    background-color: #0078d4;
+    background-color: #252423;
     border:0;
-    top:18px
+    top:12px
 }
 
 .site-nav .page-link {
-    color: white;
+    color: #e6e6e6;
 }
 
 .site-nav .page-link:visited {
-    color: white;
+    color: #e6e6e6;
 }
 
 body {
-    color: white;
+    color: #e6e6e6;
     font-style: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
     font-weight: 400;
 }
 
 a:visited {
-    color: #0091ff
+    color: #75b6e7
 }
 
 a {
-    color: #0091ff
+    color: #75b6e7
 }
 
-.site-nav .social-media-list li {
+.social-media-list li {
     border: 0;
     margin: 0;
 }
 
-.site-nav .social-media-list li a {
+.social-media-list li a {
     border: 0;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 
-.site-nav .social-media-list li a:hover, .pagination li a:hover {
-    background-color: #106EBE;
+.social-media-list li a:hover, .pagination li a:hover {
+    background-color: #605e5c;
 }
 
-.social-links .svg-icon {
-    fill: white;
+.site-nav .social-links .svg-icon {
+    fill: #e6e6e6;
+}
+
+.site-footer .social-links .svg-icon {
+    fill: #999999;
 }
