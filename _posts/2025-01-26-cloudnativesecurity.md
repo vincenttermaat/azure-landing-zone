@@ -87,8 +87,8 @@ Write a bicep script that deploys an App-Registration to be referenced on the ta
 var microsoftAzureCLIApplicationId = '04b07795-8ddb-461a-bbee-02f9e1bf7b46'
 
 resource appRegistration 'Microsoft.Graph/applications@v1.0' = {
-  uniqueName: ApiName
-  displayName: ApiName
+  uniqueName: WebApiName
+  displayName: WebApiName
   signInAudience: 'AzureADMyOrg'
   api: {
     requestedAccessTokenVersion: 2
@@ -114,8 +114,8 @@ resource appRegistration 'Microsoft.Graph/applications@v1.0' = {
 		]
   }
   web: {
-    homePageUrl: 'https://${WebApiName.properties.defaultHostName}'
-    redirectUris: ['https://${WebApiName.properties.defaultHostName}/.auth/login/aad/callback']
+    homePageUrl: 'https://${WebApi.properties.defaultHostName}'
+    redirectUris: ['https://${WebApi.properties.defaultHostName}/.auth/login/aad/callback']
     implicitGrantSettings: {
       enableAccessTokenIssuance: false
       enableIdTokenIssuance: true
@@ -143,8 +143,8 @@ Add an identifier-url which needs the app-reg ID and can only be assigned after 
 
 ```bicep
 resource WebApiAppRegistrationIdentifierUri 'Microsoft.Graph/applications@v1.0' = {
-  uniqueName: ApiName
-  displayName: ApiName
+  uniqueName: WebApiName
+  displayName: WebApiName
   identifierUris: [
       'api://${appRegistration.appId}'
     ]
@@ -242,7 +242,7 @@ Adjust the bicep where you deploy your client WebApp to enable the use of manage
 
 ```bicep
 resource WebApi 'Microsoft.Web/sites@2022-09-01' = {
-  name: ApiName
+  name: WebApiName
   location: location
   kind: 'app,linux,container'
   identity: {
@@ -261,4 +261,4 @@ resource WebApi 'Microsoft.Web/sites@2022-09-01' = {
 
 ## 6. Gain access from client-application
 
-Use [DefaultAzureCredential](https://learn.microsoft.com/en-us/dotnet/api/azure.identity.defaultazurecredential) to request a token in client put this token on authorization-header towards target.
+Use [DefaultAzureCredential](https://learn.microsoft.com/en-us/dotnet/api/azure.identity.defaultazurecredential) to request a token in client and put this token on the authorization-header towards target if built-in mechanisms do not provide this.
