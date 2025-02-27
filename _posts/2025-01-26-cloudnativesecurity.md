@@ -83,9 +83,6 @@ Add a `bicepconfig.json` that includes enablement of Bicep extensibility and use
 Write a bicep script that deploys an App-Registration to be referenced on the target WebApi
 
 ```bicep
-//Microsoft Azure CLI Application ID for Local Development - https://learn.microsoft.com/en-us/troubleshoot/azure/entra/entra-id/governance/verify-first-party-apps-sign-in
-var microsoftAzureCLIApplicationId = '04b07795-8ddb-461a-bbee-02f9e1bf7b46'
-
 resource appRegistration 'Microsoft.Graph/applications@v1.0' = {
   uniqueName: WebApiName
   displayName: WebApiName
@@ -157,6 +154,9 @@ Adjust the bicep where you deploy your Azure WebApi to reference the App-registr
 Include a reference to enable local development from VS Code or Enterprise.
 
 ```bicep
+//Microsoft Azure CLI Application ID for Local Development - https://learn.microsoft.com/en-us/troubleshoot/azure/entra/entra-id/governance/verify-first-party-apps-sign-in
+var microsoftAzureCLIApplicationId = '04b07795-8ddb-461a-bbee-02f9e1bf7b46'
+
 resource WebApi 'Microsoft.Web/sites@2022-09-01' = {
   name: WebApiName
   location: location
