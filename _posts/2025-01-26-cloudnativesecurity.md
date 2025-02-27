@@ -255,7 +255,7 @@ resource targetApiAuthSettings 'Microsoft.Web/sites/config@2022-09-01' = {
 
 ## 6. Gain access from client-application
 
-Use [DefaultAzureCredential](https://learn.microsoft.com/en-us/dotnet/api/azure.identity.defaultazurecredential) to request a token in client and put this token on the authorization-header towards target if built-in mechanisms do not provide this.
+Use [DefaultAzureCredential](https://learn.microsoft.com/en-us/dotnet/api/azure.identity.defaultazurecredential) to request a token in client and put this token on the authorization-header towards target.
 
 ```csharp
 var client = new HttpClient();
