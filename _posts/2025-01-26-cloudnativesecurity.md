@@ -89,8 +89,8 @@ Write a bicep script that deploys an App-Registration to be referenced on the ta
 var microsoftAzureCLIApplicationId = '04b07795-8ddb-461a-bbee-02f9e1bf7b46'
 
 resource appRegistration 'Microsoft.Graph/applications@v1.0' = {
-  uniqueName: smartAnnotatorMLApiName
-  displayName: smartAnnotatorMLApiName
+  uniqueName: ApiName
+  displayName: ApiName
   signInAudience: 'AzureADMyOrg'
   api: {
     requestedAccessTokenVersion: 2
@@ -145,8 +145,8 @@ Add an identifier-url which needs the app-reg ID and can only be assigned after 
 
 ```bicep
 resource WebApiAppRegistrationIdentifierUri 'Microsoft.Graph/applications@v1.0' = {
-  uniqueName: smartAnnotatorMLApiName
-  displayName: smartAnnotatorMLApiName
+  uniqueName: sApiName
+  displayName: ApiName
   identifierUris: [
       'api://${appRegistration.appId}'
     ]
@@ -176,7 +176,7 @@ resource WebApi 'Microsoft.Web/sites@2022-09-01' = {
 }
 
 resource WebApiAuthSettings 'Microsoft.Web/sites/config@2022-09-01' = {
-  parent: satMlWebApi
+  parent: WebApi
   name: 'authsettingsV2'
   kind: 'string'
   properties: {
@@ -242,8 +242,8 @@ resource WebApiAuthSettings 'Microsoft.Web/sites/config@2022-09-01' = {
 Adjust the bicep to deploy your Azure WebAPI to enable built-in OAuth authentication
 
 ```bicep
-resource satMlWebApi 'Microsoft.Web/sites@2022-09-01' = {
-  name: smartAnnotatorMLApiName
+resource WebApi 'Microsoft.Web/sites@2022-09-01' = {
+  name: ApiName
   location: location
   kind: 'app,linux,container'
   identity: {
