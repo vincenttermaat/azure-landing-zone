@@ -82,21 +82,21 @@ Add a `bicepconfig.json` that includes enablement of [Bicep extensibility](https
 Write a bicep script that deploys an App-Registration to be referenced on the target WebApi
 
 ```bicep
-resource appRegistration 'Microsoft.Graph/applications@v1.0' = {
-  uniqueName: WebApiName
-  displayName: WebApiName
+resource targetApiAppRegistration 'Microsoft.Graph/applications@v1.0' = {
+  uniqueName: targetApiName
+  displayName: targetApiName
   signInAudience: 'AzureADMyOrg'
   api: {
     requestedAccessTokenVersion: 2
     oauth2PermissionScopes: [
       {
-        adminConsentDescription: 'Allow the application to access ${WebApiName} on behalf of the signed-in user.'
-        adminConsentDisplayName: 'Access ${WebApiName}'
+        adminConsentDescription: 'Allow the application to access ${targetApiName} on behalf of the signed-in user.'
+        adminConsentDisplayName: 'Access ${targetApiName}'
         id: '2515e297-14c1-4139-8c52-ac09bc7eea0b'
         isEnabled: true
         type: 'User'
-        userConsentDescription: 'Allow the application to access ${WebApiName} on your behalf.'
-        userConsentDisplayName: 'Access ${WebApiName}'
+        userConsentDescription: 'Allow the application to access ${targetApiName} on your behalf.'
+        userConsentDisplayName: 'Access ${targetApiName}'
         value: 'user_impersonation'
       }
     ]
@@ -110,8 +110,8 @@ resource appRegistration 'Microsoft.Graph/applications@v1.0' = {
 		]
   }
   web: {
-    homePageUrl: 'https://${WebApi.properties.defaultHostName}'
-    redirectUris: ['https://${WebApi.properties.defaultHostName}/.auth/login/aad/callback']
+    homePageUrl: 'https://${targetApi.properties.defaultHostName}'
+    redirectUris: ['https://${targetApi.properties.defaultHostName}/.auth/login/aad/callback']
     implicitGrantSettings: {
       enableAccessTokenIssuance: false
       enableIdTokenIssuance: true
@@ -138,11 +138,11 @@ resource appRegistration 'Microsoft.Graph/applications@v1.0' = {
 Add an identifier-url which needs the app-reg ID and can only be assigned after creation:
 
 ```bicep
-resource WebApiAppRegistrationIdentifierUri 'Microsoft.Graph/applications@v1.0' = {
-  uniqueName: WebApiName
-  displayName: WebApiName
+resource targetApiAppRegistrationIdentifierUri 'Microsoft.Graph/applications@v1.0' = {
+  uniqueName: targetApiName
+  displayName: targetApiName
   identifierUris: [
-      'api://${appRegistration.appId}'
+      'api://${targetApiAppRegistration.appId}'
     ]
   }
 ```
@@ -156,25 +156,21 @@ Include a reference to enable local development from VS Code or Enterprise.
 //Microsoft Azure CLI Application ID for Local Development - https://learn.microsoft.com/en-us/troubleshoot/azure/entra/entra-id/governance/verify-first-party-apps-sign-in
 var microsoftAzureCLIApplicationId = '04b07795-8ddb-461a-bbee-02f9e1bf7b46'
 
-resource WebApi 'Microsoft.Web/sites@2022-09-01' = {
-  name: WebApiName
-  location: location
-  kind: 'app,linux,container'
-  identity: {
-    type: 'SystemAssigned'
-  }
-  properties: {
-    serverFarmId: appServicePlan.id
-    httpsOnly: true
-    siteConfig: {
-      acrUseManagedIdentityCreds: true
-      alwaysOn: true
-    }
-  }
+resource clientApp 'Microsoft.Web/sites@2022-09-01' existing = {
+  name: clientAppName
 }
 
-resource WebApiAuthSettings 'Microsoft.Web/sites/config@2022-09-01' = {
-  parent: WebApi
+resource clientAppIdentity 'Microsoft.ManagedIdentity/identities@2018-11-30' existing = {
+  scope: clientApp
+  name: 'default'
+}
+
+resource targetApi 'Microsoft.Web/sites@2022-09-01' existing = {
+  name: targetApiName
+}
+
+resource targetApiAuthSettings 'Microsoft.Web/sites/config@2022-09-01' = {
+  parent: targetApi
   name: 'authsettingsV2'
   kind: 'string'
   properties: {
@@ -187,17 +183,17 @@ resource WebApiAuthSettings 'Microsoft.Web/sites/config@2022-09-01' = {
       azureActiveDirectory: {
         enabled: true
         registration: {
-          clientId: appRegistration.appId
+          clientId: targetApiAppRegistration.appId
           openIdIssuer: 'https://sts.windows.net/252319a9-613a-4bf1-b184-c67f748e573a/v2.0'
         }
         validation: {
           allowedAudiences: [
-            'api://${appRegistration.appId}'
+            'api://${targetApiAppRegistration.appId}'
           ]
           defaultAuthorizationPolicy: {
             allowedApplications: [
-                appRegistration.appId
-                appServiceWebApiIdentity.properties.clientId
+                targetApiAppRegistration.appId
+                clientAppIdentity.properties.clientId
                 microsoftAzureCLIApplicationId
               ]
           }
@@ -240,8 +236,8 @@ resource WebApiAuthSettings 'Microsoft.Web/sites/config@2022-09-01' = {
 Adjust the bicep where you deploy your client WebApp to enable the use of managed-identity for authentication.
 
 ```bicep
-resource WebApi 'Microsoft.Web/sites@2022-09-01' = {
-  name: WebApiName
+resource clientApp 'Microsoft.Web/sites@2022-09-01' = {
+  name: clientAppName
   location: location
   kind: 'app,linux,container'
   identity: {
