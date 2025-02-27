@@ -8,6 +8,8 @@ tags: security microsoft-identity-platform managed-identities azure-entra-id
 Microsoft Azure provides a couple of built-in security mechanisms to secure and authenticate API resources that can be provisioned during deployment.
 To secure and access a WebApi using these built-in mechanisms you need to do a couple of things.
 
+![Image]({{ site.baseurl }}/images/image.png)
+
 ## 1. Provide Entra ID access to service-principle
 
 Your deployment service-principle needs rights to create an app-registration in Entra-ID.
