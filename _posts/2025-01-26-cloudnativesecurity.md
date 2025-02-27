@@ -156,7 +156,7 @@ resource WebApiAppRegistrationIdentifierUri 'Microsoft.Graph/applications@v1.0' 
 ## 4. Configure this App-reg on target
 
 Adjust the bicep where you deploy your Azure WebApi to reference the App-registration deployed in previous step and enable built-in authentication.
-This also includes a reference to enable local development from Visual Studio Core or Enterprise.
+Include a reference to enable local development from VS Code or Enterprise.
 
 ```bicep
 resource WebApi 'Microsoft.Web/sites@2022-09-01' = {
