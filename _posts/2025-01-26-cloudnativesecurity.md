@@ -30,7 +30,7 @@ Run the following powershell script to achieve this. Relevant Microsoft document
 #
 ##
 
-$DestinationTenantId = "252319a9-613a-4bf1-b184-c67f748e573a" #Noldus Tenant ID
+$DestinationTenantId = "YourTenantId"
 $MsiName = "NameOfServicePrinciple" # Name of system-assigned or user-assigned managed service identity to which permissions should be granted
 
 $oPermissions = @(
