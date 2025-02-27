@@ -206,7 +206,7 @@ resource targetApiAuthSettings 'Microsoft.Web/sites/config@2022-09-01' = {
         enabled: true
         registration: {
           clientId: targetApiAppRegistration.appId
-          openIdIssuer: 'https://sts.windows.net/252319a9-613a-4bf1-b184-c67f748e573a/v2.0'
+          openIdIssuer: 'https://sts.windows.net/{YourTenantId}/v2.0'
         }
         validation: {
           allowedAudiences: [
