@@ -5,7 +5,7 @@ author: "Vincent ter Maat"
 tags: security microsoft-identity-platform managed-identities azure-entra-id
 ---
 
-Microsoft Azure provides a couple of built-in security mechanisms to secure and authenticate towards Container-App and App-Service API resources that can be provisioned during deployment. To secure and access these resources using these mechanisms you need to do a couple of things.
+Microsoft Azure provides a couple of built-in security mechanisms to secure and authenticate towards Container-App and App-Service API resources that can be provisioned during deployment. To secure and access an API-resource using these built-in mechanisms you need to do a couple of things.
 
 The concept follows the [OAuth flow](https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-auth-code-flow):
 
