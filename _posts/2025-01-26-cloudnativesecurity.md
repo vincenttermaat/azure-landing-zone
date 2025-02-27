@@ -61,7 +61,7 @@ foreach($AppRole in $oAppRole)
 }
 ```
 
-## 1. Enable Bicep extensibility
+## 2. Enable Bicep extensibility
 
 Add a `bicepconfig.json` that includes enablement of Bicep extensibility and use of Azure MS Graph API that is used to communicate with Entra ID.
 
@@ -76,7 +76,7 @@ Add a `bicepconfig.json` that includes enablement of Bicep extensibility and use
 }
 ```
 
-## 2. Deploy an app-registration for target
+## 3. Deploy an app-registration for target
 
 Write a bicep script that deploys an App-Registration to be referenced on the target WebApi
 
@@ -149,7 +149,7 @@ resource WebApiAppRegistrationIdentifierUri 'Microsoft.Graph/applications@v1.0' 
   }
 ```
 
-## 3. Configure this App-reg on target
+## 4. Configure this App-reg on target
 
 Adjust the bicep where you deploy your Azure WebApi to reference the App-registration deployed in previous step
 
