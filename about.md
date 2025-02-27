@@ -3,4 +3,4 @@ title: About Vincent
 permalink: /about/
 ---
 
-About Vincent ter Maat
+Contact me via [LinkedIn](https://www.linkedin.com/in/vincent-ter-maat/)
