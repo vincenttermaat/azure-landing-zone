@@ -155,7 +155,7 @@ resource WebApiAppRegistrationIdentifierUri 'Microsoft.Graph/applications@v1.0' 
 
 ## 4. Configure this App-reg on target
 
-Adjust the bicep where you deploy your Azure WebApi to reference the App-registration deployed in previous step
+Adjust the bicep where you deploy your Azure WebApi to reference the App-registration deployed in previous step and enable built-in authentication.
 
 ```bicep
 resource WebApi 'Microsoft.Web/sites@2022-09-01' = {
@@ -239,7 +239,7 @@ resource WebApiAuthSettings 'Microsoft.Web/sites/config@2022-09-01' = {
 
 ## 5. Enable managed identity on client
 
-Adjust the bicep to deploy your Azure WebAPI to enable built-in OAuth authentication
+Adjust the bicep where you deploy your client WebApp to enable the use of managed-identity for authentication.
 
 ```bicep
 resource WebApi 'Microsoft.Web/sites@2022-09-01' = {
