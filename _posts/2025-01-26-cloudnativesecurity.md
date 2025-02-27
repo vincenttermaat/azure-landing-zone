@@ -26,8 +26,6 @@ Run the following powershell script to achieve this. Relevant Microsoft document
 # https://learn.microsoft.com/en-us/graph/templates/reference/federatedidentitycredentials?view=graph-bicep-1.0#permissions
 # https://learn.microsoft.com/en-us/graph/templates/reference/approleassignedto?view=graph-bicep-1.0#permissions
 #
-# Example: https://portal.azure.com/#view/Microsoft_AAD_IAM/ManagedAppMenuBlade/~/Permissions/objectId/1de0a50a-31fc-45e2-b056-db80c8bd5495/appId/f14038e9-b2e0-4ee4-93d0-e51e23e055d6
-#
 ##
 
 $DestinationTenantId = "YourTenantId"
