@@ -262,3 +262,12 @@ resource WebApi 'Microsoft.Web/sites@2022-09-01' = {
 ## 6. Gain access from client-application
 
 Use [DefaultAzureCredential](https://learn.microsoft.com/en-us/dotnet/api/azure.identity.defaultazurecredential) to request a token in client and put this token on the authorization-header towards target if built-in mechanisms do not provide this.
+
+```csharp
+            var client = new HttpClient() { Timeout = TimeSpan.FromMinutes(5) };
+            var credential = new DefaultAzureCredential();
+
+            var resourceUrl = $"api://{settings.APP_REGISTRATION_CLIENT_ID}/.default";
+            var accessToken = credential.GetToken(new Azure.Core.TokenRequestContext([resourceUrl]));
+            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken.Token);
+```
