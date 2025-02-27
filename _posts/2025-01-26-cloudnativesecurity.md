@@ -145,7 +145,7 @@ Add an identifier-url which needs the app-reg ID and can only be assigned after 
 
 ```bicep
 resource WebApiAppRegistrationIdentifierUri 'Microsoft.Graph/applications@v1.0' = {
-  uniqueName: sApiName
+  uniqueName: ApiName
   displayName: ApiName
   identifierUris: [
       'api://${appRegistration.appId}'
