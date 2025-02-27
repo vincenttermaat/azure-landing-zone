@@ -258,4 +258,4 @@ resource satMlWebApi 'Microsoft.Web/sites@2022-09-01' = {
 
 ## 6. Gain access from client-application
 
-Use [DefaultAzureCredential](https://learn.microsoft.com/en-us/dotnet/api/azure.identity.defaultazurecredentialEnvironment) to request a token in client put this token on authorization-header towards target.
+Use [DefaultAzureCredential](https://learn.microsoft.com/en-us/dotnet/api/azure.identity.defaultazurecredential) to request a token in client put this token on authorization-header towards target.
