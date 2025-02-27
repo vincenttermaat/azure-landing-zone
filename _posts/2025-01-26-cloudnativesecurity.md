@@ -147,10 +147,32 @@ resource targetApiAppRegistrationIdentifierUri 'Microsoft.Graph/applications@v1.
   }
 ```
 
-## 4. Configure this App-reg on target
+## 4. Enable managed identity on client
 
-Adjust the bicep where you deploy your Azure WebApi to reference the App-registration deployed in previous step and enable built-in authentication.
-Include a reference to enable local development from VS Code or Enterprise.
+Adjust the bicep where you deploy your client WebApp to enable the use of managed-identity for authentication.
+
+```bicep
+resource clientApp 'Microsoft.Web/sites@2022-09-01' = {
+  name: clientAppName
+  location: location
+  kind: 'app,linux,container'
+  identity: {
+    type: 'SystemAssigned'
+  }
+  properties: {
+    serverFarmId: appServicePlan.id
+    httpsOnly: true
+    siteConfig: {
+      acrUseManagedIdentityCreds: true
+      alwaysOn: true
+    }
+  }
+}
+```
+
+## 5. Configure the App-reg on target
+
+Adjust the bicep where you deploy your Azure WebApi to reference the App-registration and managed-identity deployed in previous step and enable built-in authentication. Include a reference to enable local development from VS Code or Enterprise.
 
 ```bicep
 //Microsoft Azure CLI Application ID for Local Development - https://learn.microsoft.com/en-us/troubleshoot/azure/entra/entra-id/governance/verify-first-party-apps-sign-in
@@ -226,29 +248,6 @@ resource targetApiAuthSettings 'Microsoft.Web/sites/config@2022-09-01' = {
       forwardProxy: {
         convention: 'NoProxy'
       }
-    }
-  }
-}
-```
-
-## 5. Enable managed identity on client
-
-Adjust the bicep where you deploy your client WebApp to enable the use of managed-identity for authentication.
-
-```bicep
-resource clientApp 'Microsoft.Web/sites@2022-09-01' = {
-  name: clientAppName
-  location: location
-  kind: 'app,linux,container'
-  identity: {
-    type: 'SystemAssigned'
-  }
-  properties: {
-    serverFarmId: appServicePlan.id
-    httpsOnly: true
-    siteConfig: {
-      acrUseManagedIdentityCreds: true
-      alwaysOn: true
     }
   }
 }
