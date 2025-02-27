@@ -172,7 +172,7 @@ resource clientApp 'Microsoft.Web/sites@2022-09-01' = {
 
 ## 5. Configure the App-reg on target
 
-Adjust the bicep where you deploy your Azure WebApi to reference the App-registration and managed-identity deployed in previous step and enable built-in authentication. Include a reference to enable local development from VS Code or Enterprise.
+Adjust the bicep where you deploy your Azure WebApi to reference the App-registration and managed-identity deployed in previous step and enable built-in authentication. Include references to the client-app and for local development with VS Code or Enterprise.
 
 ```bicep
 //Microsoft Azure CLI Application ID for Local Development - https://learn.microsoft.com/en-us/troubleshoot/azure/entra/entra-id/governance/verify-first-party-apps-sign-in
