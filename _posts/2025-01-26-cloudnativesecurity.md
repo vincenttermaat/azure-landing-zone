@@ -5,7 +5,7 @@ author: "Vincent ter Maat"
 tags: security microsoft-identity-platform managed-identities azure-entra-id
 ---
 
-Micorosoft Azure provides a couple of built-in security mechanisms to secure and authenticate API resources that can be provisioned during deployment.
+Microsoft Azure provides a couple of built-in security mechanisms to secure and authenticate API resources that can be provisioned during deployment.
 To secure and access a WebApi using these built-in mechanisms you need to do a couple of things.
 
 ## 1. Provide Entra ID access to service-principle
