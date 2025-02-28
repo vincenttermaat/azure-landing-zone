@@ -64,7 +64,7 @@ foreach($AppRole in $oAppRole)
 
 ## 2. Enable Bicep extensibility
 
-Add a `bicepconfig.json` that includes enablement of [Bicep extensibility](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-extension) and use of [Azure MS Graph API](https://learn.microsoft.com/en-us/graph/templates/overview-bicep-templates-for-graph) that is used to communicate with Entra ID.
+Add a `bicepconfig.json` that includes enablement of [Bicep extensibility](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-extension) and use of [Microsoft Graph API](https://learn.microsoft.com/en-us/graph/templates/overview-bicep-templates-for-graph) that is used to communicate with Entra ID.
 
 ```json
 {
@@ -158,14 +158,6 @@ resource clientApp 'Microsoft.Web/sites@2022-09-01' = {
   kind: 'app,linux,container'
   identity: {
     type: 'SystemAssigned'
-  }
-  properties: {
-    serverFarmId: appServicePlan.id
-    httpsOnly: true
-    siteConfig: {
-      acrUseManagedIdentityCreds: true
-      alwaysOn: true
-    }
   }
 }
 ```
