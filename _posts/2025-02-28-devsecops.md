@@ -32,6 +32,3 @@ Microsoft Azure provides several cloud-native tools and mechanisms to help achie
 -  [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/overview) to enforce certain practices
 
 Leveraging these tools helps to mitigate security risks while maintaining flexibility and scalability.
-In a future post I'll show some concrete examples of how these tools and practices can be used.
-
-In the mean time, you could already look at my blog where I show you how to [Use Managed Identity to call an Azure Container App or App Service API]({% post_url 2025-01-26-cloudnativesecurity %}).
