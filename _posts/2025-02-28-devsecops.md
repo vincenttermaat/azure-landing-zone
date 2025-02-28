@@ -17,7 +17,7 @@ As _Mark Simons, Lead Cybersecurity Architect at Microsoft_, [noted in 2019](htt
 
 These challenges with perimeter-based security have pushed the industry toward [identity-based authentication](https://learn.microsoft.com/en-us/security/benchmark/azure/mcsb-identity-management). In this paradigm, rather than relying on securing the perimeter, it relies on securing the resources themselves. This has resulted in the development of new [security guidelines and tools](https://learn.microsoft.com/en-us/security/benchmark/azure/introduction). With this shift, the responsibility for choosing scalable infrastructure components (Azure-resources) and protecting these resources now lies with the development-team expected to deliver business value.
 
-#### Solutions and challenges
+#### Tools and challenges
 
 As infrastructure and security responsibilities move into the hands of developers and architects, it’s crucial to ensure that the necessary knowledge is available within the team. It highlights the importance of [DevSecOps](https://learn.microsoft.com/en-us/devops/devsecops/enable-devsecops-azure-github) (development, security, and operations). Which is an evolution of traditional [DevOps](https://learn.microsoft.com/en-us/devops/what-is-devops), integrating security practices directly into the development pipeline.
 
