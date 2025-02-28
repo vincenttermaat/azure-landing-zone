@@ -1,5 +1,5 @@
 ---
-title: "Scalable Cloud Security and Compliancy on Microsoft Azure"
+title: "Scalable Security and Compliancy on Microsoft Azure"
 date: 2025-02-28
 author: "Vincent ter Maat"
 tags: security microsoft-identity-platform managed-identities azure-entra-id
