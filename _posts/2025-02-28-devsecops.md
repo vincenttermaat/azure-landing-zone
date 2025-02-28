@@ -28,7 +28,7 @@ Microsoft Azure provides several cloud-native tools and mechanisms to help achie
 -  [Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-regulatory-compliance-standards) to assess and monitor the security mechanisms that are in place on your resources
 -  [Managed Identities](https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview) combined with [Azure RBAC](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview) to [provide access without secret-management](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/migrate-applications-from-secrets).
 -  [App Registrations and service principals](https://learn.microsoft.com/en-us/entra/identity-platform/app-objects-and-service-principals)
--  Resources specific mechanisms like [built-in authentication](https://learn.microsoft.com/en-us/azure/app-service/overview-authentication-authorization)
+-  Resource specific mechanisms like [built-in authentication](https://learn.microsoft.com/en-us/azure/app-service/overview-authentication-authorization)
 -  [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/overview) to enforce certain practices
 
 Leveraging these tools helps to mitigate security risks while maintaining flexibility and scalability.
