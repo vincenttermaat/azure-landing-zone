@@ -31,7 +31,6 @@ Microsoft Azure provides several cloud-native tools and mechanisms to help achie
 -  Resources specific mechanisms like [built-in authentication](https://learn.microsoft.com/en-us/azure/app-service/overview-authentication-authorization)
 
 Leveraging these tools helps to mitigate security risks while maintaining flexibility and scalability.
-
-In a future post I'll show some concrete examples of how these tools and practices can be used.
+In a future post I'll show some concrete examples of how these tools and practices can be used to achieve DevSecOps.
 
 In the mean time, you could already look at my blog where I show you how to [Use Managed Identity to call an Azure Container App or App Service API]({% post_url 2025-01-26-cloudnativesecurity %}).
