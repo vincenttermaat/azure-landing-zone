@@ -31,4 +31,4 @@ Microsoft Azure provides several tools and mechanisms to ensure compliance. Exam
 
 In a future post I'll show some concrete examples of how these tools and practices can be used.
 
-In the mean time, you could already look at my blog where I show you how to [Use Managed Identity to call an Azure Container App or App Service API]({% post_url 2025-01-26-cloudnativesecurity %}) 🙌.
+In the mean time, you could already look at my blog where I show you how to [Use Managed Identity to call an Azure Container App or App Service API]({% post_url 2025-01-26-cloudnativesecurity %}).
