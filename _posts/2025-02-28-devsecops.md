@@ -30,7 +30,7 @@ Microsoft Azure provides several cloud-native tools and mechanisms to help achie
 -  [App Registrations and service principals](https://learn.microsoft.com/en-us/entra/identity-platform/app-objects-and-service-principals)
 -  Resources specific mechanisms like [built-in authentication](https://learn.microsoft.com/en-us/azure/app-service/overview-authentication-authorization)
 
- These tools become increasingly important, especially in environments where traditional network perimeters are not in place - such as in an vanilla Azure environment. Leveraging these tools helps to mitigate security risks while maintaining flexibility and scalability.
+Leveraging these tools helps to mitigate security risks while maintaining flexibility and scalability.
 
 In a future post I'll show some concrete examples of how these tools and practices can be used.
 
