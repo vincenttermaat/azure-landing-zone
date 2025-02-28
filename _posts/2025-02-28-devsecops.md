@@ -21,7 +21,7 @@ These challenges with perimeter-based security have pushed the industry towards 
 
 As infrastructure and security responsibilities move into the hands of developers and architects, it’s crucial to ensure that the necessary knowledge is available within the team. It highlights the importance of [DevSecOps](https://learn.microsoft.com/en-us/devops/devsecops/enable-devsecops-azure-github) (development, security, and operations). Which is an evolution of traditional [DevOps](https://learn.microsoft.com/en-us/devops/what-is-devops), integrating security practices directly into the development pipeline.
 
-Microsoft Azure provides several cloud-native tools and mechanisms to help ensure compliance efficiently. Examples include:
+Microsoft Azure provides several cloud-native tools and mechanisms that help to achieve this. Examples include:
 -  [Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-regulatory-compliance-standards) to assess and monitor the security mechanisms that are in place on your resources
 -  [Managed Identities](https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview) combined with [Azure RBAC](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview) to [provide access without secret-management](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/migrate-applications-from-secrets).
 -  [App Registrations and service principals](https://learn.microsoft.com/en-us/entra/identity-platform/app-objects-and-service-principals)
@@ -29,6 +29,6 @@ Microsoft Azure provides several cloud-native tools and mechanisms to help ensur
 
  These tools become increasingly important, especially in environments where traditional network perimeters are not in place - such as in an vanilla Azure environment. Leveraging these tools helps to mitigate security risks while maintaining flexibility and scalability.
 
-In a future post I'll show some concrete examples of how these tools and practices can be used to help achieve DevSecOps effectively.
+In a future post I'll show some concrete examples of how these tools and practices can be used to help achieve DevSecOps.
 
 In the mean time, you could already look at my blog where I show you how to [Use Managed Identity to call an Azure Container App or App Service API]({% post_url 2025-01-26-cloudnativesecurity %}).
