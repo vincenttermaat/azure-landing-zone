@@ -29,6 +29,6 @@ Microsoft Azure provides several cloud-native tools and mechanisms to help ensur
 
  These tools become increasingly important, especially in environments where traditional network perimeters are not in place - such as in an vanilla Azure environment. Leveraging these tools helps to mitigate security risks while maintaining flexibility and scalability.
 
-In a future post I'll show some concrete examples of how these tools and practices can be used.
+In a future post I'll show some concrete examples of how these tools and practices can be used to help achieve DevSecOps.
 
 In the mean time, you could already look at my blog where I show you how to [Use Managed Identity to call an Azure Container App or App Service API]({% post_url 2025-01-26-cloudnativesecurity %}).
