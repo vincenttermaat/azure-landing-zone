@@ -15,19 +15,19 @@ While these guidelines are more specific, they build upon existing standards lik
 #### A Brief History of Cloud Security
 As _Mark Simons, Lead Cybersecurity Architect at Microsoft_, [noted in 2019](https://www.microsoft.com/en-us/security/blog/2019/11/11/zero-trust-strategy-what-good-looks-like/), traditional security models relied heavily on a _"Trusted Network" security strategy_. As he mentions, this approach involves creating a strong network perimeter where the inside is trusted, and the outside is not. However, as organizations move to the cloud, this network-centric model can become increasingly complex, expensive, and inflexible - especially when applied to dynamic, microservices-based environments like those found in Azure.
 
-These challenges with perimeter-based security have pushed the industry toward [identity-based authentication](https://learn.microsoft.com/en-us/security/benchmark/azure/mcsb-identity-management). In this paradigm, rather than relying on securing the perimeter, it relies on securing the resources themselves. This has resulted in the development of new [security guidelines and tools](https://learn.microsoft.com/en-us/security/benchmark/azure/introduction). With this shift, the responsibility for choosing scalable infrastructure components (Azure-resources) and protecting these resources now lies with the development-team expected to deliver business value.
+These challenges with perimeter-based security have pushed the industry towards [identity-based authentication](https://learn.microsoft.com/en-us/security/benchmark/azure/mcsb-identity-management). In this paradigm, rather than relying on securing the perimeter, it relies on securing the resources themselves. This has resulted in the development of new [security guidelines and tools](https://learn.microsoft.com/en-us/security/benchmark/azure/introduction). With this shift, the responsibility for choosing scalable infrastructure components (Azure-resources) and protecting these now lies with the development-team expected to deliver business value.
 
 #### Tools and challenges
 
 As infrastructure and security responsibilities move into the hands of developers and architects, it’s crucial to ensure that the necessary knowledge is available within the team. It highlights the importance of [DevSecOps](https://learn.microsoft.com/en-us/devops/devsecops/enable-devsecops-azure-github) (development, security, and operations). Which is an evolution of traditional [DevOps](https://learn.microsoft.com/en-us/devops/what-is-devops), integrating security practices directly into the development pipeline.
 
-Microsoft Azure provides several tools and mechanisms to ensure compliance. Examples include:
+Microsoft Azure provides several cloud-native tools and mechanisms to help ensure compliance efficiently. Examples include:
 -  [Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-regulatory-compliance-standards) to assess and monitor the security mechanisms that are in place on your resources
 -  [Managed Identities](https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview) combined with [Azure RBAC](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview) to [provide access without secret-management](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/migrate-applications-from-secrets).
 -  [App Registrations and service principals](https://learn.microsoft.com/en-us/entra/identity-platform/app-objects-and-service-principals)
 -  Resources specific mechanisms like [built-in authentication](https://learn.microsoft.com/en-us/azure/app-service/overview-authentication-authorization)
 
- These tools become increasingly important, especially in environments where traditional network perimeters are not in place - such as in a vanilla Azure environment. Leveraging these tools helps to mitigate security risks while maintaining flexibility and scalability.
+ These tools become increasingly important, especially in environments where traditional network perimeters are not in place - such as in an vanilla Azure environment. Leveraging these tools helps to mitigate security risks while maintaining flexibility and scalability.
 
 In a future post I'll show some concrete examples of how these tools and practices can be used.
 
