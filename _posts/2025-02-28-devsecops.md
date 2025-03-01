@@ -7,7 +7,7 @@ tags: security microsoft-identity-platform managed-identities azure-entra-id
 
 As cloud security becomes increasingly important, it presents a challenge to balance efficiency with maintaining a compliant and secure cloud platform. In this post, I'll explain why this is important for cloud-architects and engineers and how you can use the [Microsoft Identity Platform](https://learn.microsoft.com/en-us/entra/identity-platform/v2-overview) to support a scalable [Zero Trust Architecture](https://learn.microsoft.com/en-us/security/zero-trust/zero-trust-overview) on the Azure-platform.
 
-Microsoft [describes this challenge](https://learn.microsoft.com/en-us/security/benchmark/azure/introduction) as follows:
+Microsoft [mentions](https://learn.microsoft.com/en-us/security/benchmark/azure/introduction) the following challenge:
 >The cloud moves fast, developers move fast, and attackers also move fast. How do you keep up and make sure that your cloud deployments are secure?
 
 #### Regulations: A Changing Landscape
